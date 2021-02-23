@@ -1,6 +1,6 @@
 [package]
 name = "just-func"
-version = "0.1.0"
+version = "0.0.0-alpha"
 authors = ["Homa Wong <homawong@gmail.com>"]
 edition = "2018"
 
