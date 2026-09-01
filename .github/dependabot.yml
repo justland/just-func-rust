@@ -1,0 +1,24 @@
+version: 2
+updates:
+  - package-ecosystem: cargo
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+    # Supply-chain soak: mirrors the baseline's `minimumReleaseAge`, so a freshly
+    # published (possibly compromised) version is not merged the minute it lands.
+    cooldown:
+      default-days: 3
+    groups:
+      cargo-minor-patch:
+        update-types: [minor, patch]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 3
+    groups:
+      github-actions:
+        update-types: [minor, patch]
