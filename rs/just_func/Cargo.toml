@@ -1,14 +1,17 @@
 [package]
 name = "just-func"
 description = "just-func in Rust"
-version = "0.0.0-alpha"
-authors = ["Homa Wong <homawong@gmail.com>"]
-license = "MIT"
-edition = "2018"
-homepage = "https://github.com/justland/just-func-rust"
-repository = "https://github.com/justland/just-func-rust"
-documentation = "https://github.com/justland/just-func-rust"
-
+readme = "README.md"
+keywords = ["just-func", "functional"]
+categories = ["no-std"]
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+documentation.workspace = true
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
