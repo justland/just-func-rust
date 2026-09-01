@@ -1,0 +1,9 @@
+name: pull-request
+on:
+  pull_request:
+    branches: [main]
+  merge_group:
+
+jobs:
+  code:
+    uses: ./.github/workflows/cargo-verify.yml
