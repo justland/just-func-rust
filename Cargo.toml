@@ -3,7 +3,7 @@ resolver = "3"
 members = ["rs/just_func"]
 
 [workspace.package]
-version = "0.0.0-alpha"
+version = "0.0.0-alpha.1"
 authors = ["Homa Wong <homawong@gmail.com>"]
 edition = "2024"
 rust-version = "1.85"
