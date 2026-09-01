@@ -1,0 +1,25 @@
+# Only cut a release when the published artifact actually changes.
+#
+# release-plz proposes a version bump for *any* commit by default, so a PR that
+# only touches repo-internal things (CI, repo layout, docs, the test runner)
+# would otherwise cut a version advertising changes that do not exist. The org
+# policy is: `feat:` -> minor, `fix:` -> patch, everything else -> no release.
+[workspace]
+# A release PR is opened only if at least one commit since the last release
+# matches. The second alternative catches a breaking change marked on any type.
+release_commits = '^(feat|fix)(\(.+\))?!?:|^[a-zA-Z]+(\(.+\))?!:'
+
+[changelog]
+protect_breaking_commits = true
+commit_parsers = [
+  { message = "^feat", group = "Added" },
+  { message = "^fix", group = "Fixed" },
+  { message = "^perf", group = "Performance" },
+  { message = "^chore", skip = true },
+  { message = "^ci", skip = true },
+  { message = "^docs", skip = true },
+  { message = "^test", skip = true },
+  { message = "^style", skip = true },
+  { message = "^build", skip = true },
+  { message = "^refactor", skip = true },
+]
