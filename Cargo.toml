@@ -1,4 +1,13 @@
 [workspace]
-members = [
-  "rs/just_func"
-]
+resolver = "3"
+members = ["rs/just_func"]
+
+[workspace.package]
+version = "0.0.0-alpha"
+authors = ["Homa Wong <homawong@gmail.com>"]
+edition = "2024"
+rust-version = "1.85"
+license = "MIT"
+homepage = "https://github.com/justland/just-func-rust"
+repository = "https://github.com/justland/just-func-rust"
+documentation = "https://docs.rs/just-func"
