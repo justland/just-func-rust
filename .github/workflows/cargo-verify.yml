@@ -20,7 +20,7 @@ jobs:
         os: ${{ fromJson(inputs.os) }}
         rust-version: ${{ fromJson(inputs.rust-version) }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Install Rust ${{ matrix.rust-version }}
         uses: dtolnay/rust-toolchain@stable
